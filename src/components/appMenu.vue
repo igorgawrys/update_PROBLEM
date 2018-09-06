@@ -2,20 +2,20 @@
     <div class="menu" id="menu">
         <div class="container">
             <ul>
-                <li v-for="category in categories" 
+                <li v-for="category in categories"
                 @click='changeCategory' :key="category.index">{{category}}</li>
             </ul>
             <div class="country-select">
-                <select 
+                <select
                     @change = 'changeCountry'
                     id="country-input">
-                    
+
                     <option value="pl">PL</option>
                     <option value="us">US</option>
                 </select>
             </div>
         </div>
-       
+
     </div>
 </template>
 
@@ -48,7 +48,7 @@ export default {
         background-color: #41B883;
 
         .container  {
-            max-width: 120rem;  
+            max-width: 120rem;
             height: 20rem;
             margin: 0 auto;
             display: flex;
@@ -64,13 +64,13 @@ export default {
             align-items: center;
             font-size: 2rem;
             color: #fff;
-            
+
             & li {
                 cursor: pointer;
                 transition: all .2s ease-in-out;
-                border-bottom: .2rem solid transparent; 
+                border-bottom: .2rem solid transparent;
                 margin: 2rem;
-            
+
             &:hover {
                 font-weight: 700;
                 border-bottom: .2rem solid #fff;
@@ -90,7 +90,7 @@ export default {
                 color: #000;
             }
     }
-       
+
     }
     @media screen and (max-width: 1200px) {
         .menu {
